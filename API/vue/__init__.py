@@ -5,7 +5,7 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from API.vue.users_resource import api_users
 from API.vue.conversations_resource import api_conversations
 
-"""
+
 from API.model.database import DatabaseEngine
 from API.model.mapping import role, user, conv_user, conversation, message
 from API.controller.conversation_controller import ConversationController
@@ -13,6 +13,7 @@ from API.controller.conv_user_controller import ConvUserController
 from API.controller.message_controller import MessageController
 from API.controller.user_controller import UserController
 
+"""
 # Init db
 database_engine = DatabaseEngine(url='sqlite:///bds.db')
 database_engine.create_database()
@@ -37,9 +38,9 @@ def verify(username, password):
         return check_password_hash(USER_DATA[username], password)
     """
     user = user_manager.get_user_by_pseudo(username)
-    if not (username and passwd):
+    if not (username and password):
         return False
-    return check_password_hash(user.password, passwd)
+    return check_password_hash(user.password, password)
     """
 
 # API declaration

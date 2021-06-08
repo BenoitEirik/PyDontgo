@@ -1,0 +1,3 @@
+{
+    "files": ["qml/TopBarButton.qml","qml/test_data_msg1.qml","qml/MessageList.qml","qml/splashScreen.qml","main.py","main.qml","qml/test_data_msg.qml","qml/main.qml","conversation.py","qml/components/CircularProgressBar.qml","qml/components/CustomButton.qml","qml/components/CustomTextField.qml"]
+}

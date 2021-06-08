@@ -1,0 +1,7 @@
+PySide2
+flask
+flask-restx
+SQLAlchemy
+Flask-HTTPAuth
+Flask-SQLAlchemy
+Werkzeug

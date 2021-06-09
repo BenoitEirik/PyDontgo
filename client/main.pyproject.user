@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.14.2, 2021-06-08T01:33:48. -->
+<!-- Written by QtCreator 4.14.2, 2021-06-09T00:42:25. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -169,16 +169,16 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">main</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.D:/ESIEA/3A/S2/GLPOO/Git/client/main.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/ESIEA/3A/S2/GLPOO/Git/client/main.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">main2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.D:/Multimédia/PyDontgo/PyDontgo/client/main.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Multimédia/PyDontgo/PyDontgo/client/main.py</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{c644c070-4f44-427e-abb4-1fb85acbd2bb}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">D:\ESIEA\3A\S2\GLPOO\Git\client\main.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">D:\Multimédia\PyDontgo\PyDontgo\client\main.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/ESIEA/3A/S2/GLPOO/Git/client</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/Multimédia/PyDontgo/PyDontgo/client</value>
    </valuemap>
    <valuemap type="QVariantMap" key="ProjectExplorer.Target.RunConfiguration.1">
     <value type="QString" key="Analyzer.Perf.CallgraphMode">dwarf</value>
@@ -241,16 +241,16 @@
     <valuelist type="QVariantList" key="CustomOutputParsers"/>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">conversation</value>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.D:/ESIEA/3A/S2/GLPOO/Git/client/conversation.py</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/ESIEA/3A/S2/GLPOO/Git/client/conversation.py</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">conversation2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">PythonEditor.RunConfiguration.D:/Multimédia/PyDontgo/PyDontgo/client/conversation.py</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">D:/Multimédia/PyDontgo/PyDontgo/client/conversation.py</value>
     <value type="QString" key="PythonEditor.RunConfiguation.Interpreter">{c644c070-4f44-427e-abb4-1fb85acbd2bb}</value>
-    <value type="QString" key="PythonEditor.RunConfiguation.Script">D:\ESIEA\3A\S2\GLPOO\Git\client\conversation.py</value>
+    <value type="QString" key="PythonEditor.RunConfiguation.Script">D:\Multimédia\PyDontgo\PyDontgo\client\conversation.py</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>
     <value type="bool" key="RunConfiguration.UseQmlDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseQmlDebuggerAuto">true</value>
-    <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/ESIEA/3A/S2/GLPOO/Git/client</value>
+    <value type="QString" key="RunConfiguration.WorkingDirectory.default">D:/Multimédia/PyDontgo/PyDontgo/client</value>
    </valuemap>
    <value type="int" key="ProjectExplorer.Target.RunConfigurationCount">2</value>
   </valuemap>

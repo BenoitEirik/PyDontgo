@@ -6,8 +6,8 @@ import "components"
 
 Window {
     id: splashScreen
-    width: 360
-    height: 560
+    width: 340
+    height: 540
     visible: true
     color: "transparent"
     title: qsTr("PyDontgo")
@@ -42,8 +42,7 @@ Window {
         id: bg
         x: 78
         y: 131
-        width: 360
-        height: 560
+        anchors.fill: parent
         color: "#151515"
         radius: 8
         anchors.verticalCenter: parent.verticalCenter
@@ -148,7 +147,7 @@ Window {
             color: "#ffffff"
             text: qsTr("PyDontgo")
             anchors.bottom: textUrlServer.top
-            anchors.bottomMargin: 35
+            anchors.bottomMargin: 25
             font.family: "Segoe UI"
             font.pointSize: 16
             anchors.horizontalCenter: parent.horizontalCenter

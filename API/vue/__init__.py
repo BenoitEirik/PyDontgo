@@ -38,7 +38,7 @@ def verify(username, password):
         return check_password_hash(USER_DATA[username], password)
     """
     user = user_manager.get_user_by_pseudo(username)
-    if not (username and password):
+    if not (username or password or user):
         return False
     return check_password_hash(user.password, password)
     """

@@ -26,7 +26,7 @@ Window {
         id: left_area
         width: 250
         color: "#ffffff"
-        anchors.left: side_bar.right
+        anchors.left: parent.left
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.leftMargin: 0
@@ -181,7 +181,7 @@ Window {
         id: central_area
         color: "#ffffff"
         anchors.left: left_area.right
-        anchors.right: right_area.left
+        anchors.right: parent.right
         anchors.top: parent.top
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 0
@@ -340,171 +340,6 @@ Window {
             anchors.topMargin: 0
             Material.background: "#4A4A4A"
             clip: false
-        }
-    }
-
-    Rectangle {
-        id: right_area
-        x: 750
-        width: 250
-        color: "#fff"
-        anchors.right: parent.right
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.rightMargin: 0
-        anchors.bottomMargin: 0
-        anchors.topMargin: 0
-        clip: true
-        TabBar {
-            id: tabBar_right_area
-            width: 250
-            height: 48
-            Material.background: "#4A4A4A"
-            Material.accent: "white"
-            Material.foreground: "#CCCCCC"
-        }
-
-        SwipeView {
-            id: swipeView
-            anchors.left: parent.left
-            anchors.right: parent.right
-            anchors.top: tabBar_right_area.bottom
-            anchors.bottom: parent.bottom
-            anchors.rightMargin: 0
-            anchors.leftMargin: 0
-            anchors.bottomMargin: 0
-            anchors.topMargin: 0
-            clip: true
-            Column {
-                // index 0
-                id: profile_right_area
-                ItemDelegate {
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    height: width
-                    Image {
-                        id: profile_img_right_area
-                        source: "images/eagle-profile-user.png"
-                        anchors.centerIn: parent
-                        width: 100
-                        height: 100
-                        sourceSize.width: width
-                        sourceSize.height: height
-                    }
-                    Text {
-                        anchors.top: profile_img_right_area.bottom
-                        anchors.topMargin: 20
-                        anchors.horizontalCenter: profile_img_right_area.horizontalCenter
-                        id: profile_id_right_area
-                        text: "ID: #olaf14"
-                    }
-                }
-                ItemDelegate {
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    height: 70
-                    TextField {
-                        id: profile_name_right_area
-                        text: "SERGENT Olaf-Marie"
-                        anchors.centerIn: parent
-                        width: parent.width - 10
-                        font.pixelSize: 16
-                        background: Rectangle {color: "transparent"}
-                        selectByMouse: true
-                        horizontalAlignment: TextInput.AlignHCenter
-                    }
-                }
-                ItemDelegate {
-                    anchors.left: parent.left
-                    anchors.right: parent.right
-                    height: 70
-                }
-            }
-            ListView {
-                // index 1
-                id: settings_right_area
-            }
-        }
-    }
-    Rectangle {
-        id: side_bar
-        width: 56
-        color: "#4A4A4A"
-        anchors.left: parent.left
-        anchors.top: parent.top
-        anchors.bottom: parent.bottom
-        anchors.leftMargin: 0
-        anchors.bottomMargin: 0
-        anchors.topMargin: 0
-        clip: true
-        PropertyAnimation{
-            id: animationMenu
-            target: side_bar
-            property: "width"
-            to: if(side_bar.width == 56) return 250; else return 56
-            duration: 400
-            easing.type: Easing.InOutQuint
-        }
-        ItemDelegate {
-            id: btn_menu
-            anchors.top: parent.top
-            anchors.left: parent.left
-            width: 56
-            height: 48
-            display: AbstractButton.IconOnly
-            icon.source: "images/menu-24px.svg"
-            Material.background: hovered ? "#5C5C5C" : "#4A4A4A"
-            Material.foreground: "#ffffff"
-            Material.primary: "blue"
-            Material.elevation: 0
-            property bool switch_on: false
-            onClicked: {
-                animationMenu.start()
-            }
-        }
-        ItemDelegate {
-            id: btn_disconnect
-            width: 250
-            height: 56
-            anchors.left: parent.left
-            anchors.bottom: btn_settings.top
-            display: AbstractButton.TextBesideIcon
-            text: "Déconnexion"
-            icon.source: "images/logout_black_24dp.svg"
-            spacing: 30
-            Material.background: hovered ? "#5C5C5C" : "#4A4A4A"
-            Material.foreground: "#ffffff"
-            Material.primary: "blue"
-            Material.elevation: 0
-        }
-        ItemDelegate {
-            id: btn_settings
-            x: 0
-            y: 499
-            width: 250
-            height: 56
-            anchors.left: parent.left
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 0
-            anchors.rightMargin: 0
-            anchors.leftMargin: 0
-            display: AbstractButton.TextBesideIcon
-            text: "Paramètres"
-            icon.source: "images/settings-24px.svg"
-            spacing: 30
-            Material.background: hovered ? "#5C5C5C" : "#4A4A4A"
-            Material.foreground: "#ffffff"
-            Material.primary: "blue"
-            Material.elevation: 0
-        }
-    }
-    Rectangle {
-        id: hide_view
-        color: Qt.rgba(0,0,0,0.50)
-        visible: true
-        focus: false
-        MouseArea {
-            anchors.fill: parent
         }
     }
 }

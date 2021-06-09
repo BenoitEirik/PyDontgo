@@ -31,7 +31,7 @@ auth = HTTPBasicAuth()
 USER_DATA = { # TODO request to DB
     "admin": generate_password_hash("5GdFP7u8MYFiFc*A3dJ3TAqnBhgeqBmsjYVMaJY@PS#&bgQr")
 }
-# sha256 : 150000$pslYcGA8$c52a60533b934c29ad0d4132074985c9594dfe7792556f76af4c786397f4464c
+# pbkdf2:sha256:260000$lArok8p2yy0CaZYV$0b71f15d780a73d46e97ec48f07c66b36e82c3285acf76d97d250a036e260374
 
 
 @auth.verify_password
@@ -42,11 +42,10 @@ def verify(username, password):
     elif username in USER_DATA:
         return check_password_hash(USER_DATA[username], password)
     """
-    # print("[help] Genrated hash :", generate_password_hash("5GdFP7u8MYFiFc*A3dJ3TAqnBhgeqBmsjYVMaJY@PS#&bgQr"), "[end]")
     if not (username or password):
         return False
     else:
-        user = user_manager.get_user_by_pseudo(username)
+        user = user_manager.get_user_by_username(username)
         return check_password_hash(user['password_hash'], password)
     
 
@@ -81,7 +80,7 @@ class API_info(Resource):
 @api_test.route('/')
 class API_test(Resource):
     def get(self):
-        user = user_manager.get_user_by_pseudo('admin')
+        user = user_manager.get_user_by_username('admin')
         print("List of users: ", user)
         return {'user': 'test'}
 

@@ -23,7 +23,6 @@ class Network(QObject):
             res = self.session.get(self.urlBase)
             res.raise_for_status()
             print(res.text)
-            return False
         except requests.exceptions.HTTPError as err:
             raise SystemExit(err)
 

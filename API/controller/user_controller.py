@@ -20,9 +20,9 @@ class UserController:
             member_data = member.to_dictionary()
         return member_data
 
-    def get_user_by_pseudo(self, pseudo: str):
+    def get_user_by_username(self, username: str):
         with self._database_engine.new_session() as session:
-            member = UserDAO(session).get_by_pseudo(pseudo)
+            member = UserDAO(session).get_by_username(username)
             member_data = member.to_dictionary()
         return member_data
 

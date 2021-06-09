@@ -7,7 +7,7 @@ class ListConversations(QObject):
         QObject.__init__(self)
         self.net = net
         self.id_user = id_user
-        self.url = "api/conversations/list_convs/" + str(id_user)
+        self.url = "/conversations/list_convs/" + str(id_user)
         self.jsonStr = ""
         self.jsonObject = None
         self.listObjConvs = []

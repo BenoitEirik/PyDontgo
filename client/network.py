@@ -14,13 +14,18 @@ class Network(QObject):
 
     @Slot(str, str, str, result=bool)
     def openSession(self, urlBase, username, password):
-        self.urlBase = 'http://' + urlBase + '/'
+        self.urlBase = 'http://' + urlBase + '/api'
         self.username = username
         self.password = password
         self.session = requests.session()
         self.session.auth = HTTPBasicAuth(self.username, self.password)
-        self.session.get(self.urlBase)
-        return True
+        try:
+            res = self.session.get(self.urlBase)
+            res.raise_for_status()
+            print(res.text)
+            return False
+        except requests.exceptions.HTTPError as err:
+            raise SystemExit(err)
 
     def get(self, resource):
         res = self.session.get(self.urlBase + resource)

@@ -27,7 +27,7 @@ class UserDAO(DAO):
 
     def get_by_pseudo(self, pseudo: str):
         try:
-            return self._database_session.query(User).filter_by(pseudo=pseudo).one()
+            return self._database_session.query(User).filter_by(pseudo=pseudo).first()
         except NoResultFound:
             raise ResourceNotFound()
 
@@ -40,7 +40,7 @@ class UserDAO(DAO):
 
     def create(self, data: dict):
         try:
-            user = User(firstname=data.get('firstname'), lastname=data.get('lastname'), pseudo=data.get('pseudo'), password=data.get('password'))
+            user = User(firstname=data.get('firstname'), lastname=data.get('lastname'), pseudo=data.get('pseudo'), password_hash=data.get('password_hash'))
             self._database_session.add(user)
             self._database_session.flush()
         except IntegrityError:
@@ -54,8 +54,8 @@ class UserDAO(DAO):
             user.lastname = data['lastname']
         if 'pseudo' in data:
             user.pseudo = data['pseudo']
-        if 'password' in data:
-            user.password = data['password']
+        if 'password_hash' in data:
+            user.password_hash = data['password_hash']
         try:
             self._database_session.merge(user)
             self._database_session.flush()

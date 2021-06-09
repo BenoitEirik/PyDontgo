@@ -8,13 +8,14 @@ class Message(Base):
     __tablename__ = 'message'
 
     id = Column(Integer, primary_key=True)
+
     conv_user = Column(Integer, ForeignKey('conv_user.id'))
     content = Column(Text)
     time_created = Column(DateTime(timezone=True), server_default=func.now())
     time_updated = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
     def __repr__(self):
-        return "<Member(%s %s)>" % (self.id, self.name)
+        return "<Member(%s %s)>" % (self.id, self.content)
 
     def to_dictionary(self):
         return dict(id=self.id, conv_user=self.conv_user, content=self.content)

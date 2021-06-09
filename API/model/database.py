@@ -2,8 +2,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from API.model.mapping import *
 
-from API.model.mapping import Base
-
 
 class DatabaseEngine:
     """

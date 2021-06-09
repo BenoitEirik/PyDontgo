@@ -20,7 +20,8 @@ Window {
         id: internal
 
         function checkLogin(server, username, password){
-            var check = net.openSession(server, username, password)
+            var check = net.openSession("127.0.0.1:5000", "admin", "5GdFP7u8MYFiFc*A3dJ3TAqnBhgeqBmsjYVMaJY@PS#&bgQr")
+            console.log(check)
             if(check){
                 // Load list conv information
                 dataConvs.updateListObjConvs()
